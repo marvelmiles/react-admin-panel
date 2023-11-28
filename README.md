@@ -1,6 +1,6 @@
 # React ADMIN PANEL
 
-This is a refactored version of lama dev react-admin-panel \([react admin panel part1](https://www.youtube.com/watch?v=yKV1IGahXqA&t=12s){:target="\_blank"} [react admin panel part2](https://www.youtube.com/watch?v=D9W7AFeJ3kk&t=351s){:target="\_blank"}\) bootstrapped with [Create React App](https://github.com/facebook/create-react-app){:target="\_blank"}. You can view the live version [here](https://cozy-granita-a65274.netlify.app/){:target="\_blank"}
+(https://cozy-granita-a65274.netlify.app/){:target="\_blank"}
 
 ## Updates
 

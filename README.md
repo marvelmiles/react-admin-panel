@@ -1,6 +1,6 @@
 # React ADMIN PANEL
 
-(https://cozy-granita-a65274.netlify.app/){:target="\_blank"}
+[ff](https://cozy-granita-a65274.netlify.app){:target="\_blank"}
 
 ## Updates
 

@@ -118,7 +118,7 @@ export default function Login() {
                 fullname: "Adebayo Opeyemi"
               }
             ].map((u, i) => {
-              const trim = u.fullname.replace(/\s/, "");
+              const trim = u.fullname.replace(/\s/, "").toLowerCase();
               return (
                 <Chip
                   key={i}

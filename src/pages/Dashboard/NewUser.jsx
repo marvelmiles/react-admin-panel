@@ -54,6 +54,12 @@ export default function NewUser() {
 
       const onPhotoUpload = photoUrl => {
         resetForm({ ...formData, photoUrl });
+        setSnackBar({
+          severity: "success",
+          message: userId
+            ? "User updated successfully!"
+            : "User created successfully!"
+        });
       };
 
       if (userId) {
@@ -103,7 +109,6 @@ export default function NewUser() {
           },
           onError: ({ code }) => {
             setUploadErrMsg(setSnackBar, code);
-            navigate("/dashboard/users");
           },
           onUpload: onPhotoUpload
         });

@@ -13,6 +13,7 @@ import { sendPasswordResetEmail } from "@firebase/auth";
 import { auth } from "../firebase";
 import { setAuthErrorMsg } from "../firebase/errorHandlers";
 import { SlideTransition, Loading } from "../components/Animations";
+import AuthLayout from "../components/AuthLayout";
 
 export default function ResetPassword() {
   const [loading, setLoading] = useState(true);
@@ -56,44 +57,22 @@ export default function ResetPassword() {
   if (loading) return <Loading />;
   return (
     <>
-      <Box
-        onSubmit={handleSubmit}
-        component="form"
-        sx={{
-          position: "absolute",
-          borderRadius: 2,
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%,-50%)",
-          width: "90%",
-          maxWidth: "500px",
-          boxShadow: 1,
-          p: 2,
-          textAlign: "center"
-        }}
-      >
-        <Typography
-          variant="lead"
-          color={darkMode ? "primary.contrastText" : "primary.light"}
-        >
-          Verification Email
-        </Typography>
-        <Input
-          type="email"
-          name="email"
-          placeholder="Email"
-          disableUnderline
-          variant="outlined"
-          value={formData.email}
-          onChange={handleChange}
-          sx={{
-            borderColor: !!errors.email ? "error.main" : "primary.light"
-          }}
-        />
-        <Button type="submit" variant="contained" disabled={isSubmitting}>
-          Send Mail
-        </Button>
-      </Box>
+      <AuthLayout
+        title="Verification Email"
+        formData={formData}
+        errors={errors}
+        handleSubmit={handleSubmit}
+        handleChange={handleChange}
+        isSubmitting={isSubmitting}
+        btnTitle="Send Mail"
+        forms={[
+          {
+            type: "email",
+            name: "email",
+            placeholder: "Email"
+          }
+        ]}
+      />
       <Snackbar
         open={snackBar.open}
         autoHideDuration={10000}

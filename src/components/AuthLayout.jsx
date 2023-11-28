@@ -16,12 +16,14 @@ const AuthLayout = ({
   handleChange,
   preInputEl,
   formData,
+  title = "React Admin",
   errors,
   forms,
   isSubmitting,
   postFormEl,
   postInputEl,
-  postBtnEl
+  postBtnEl,
+  btnTitle = "login"
 }) => {
   const [hidePwd, setHidePwd] = useState(true);
   const { darkMode } = useTheme();
@@ -31,7 +33,7 @@ const AuthLayout = ({
       variant="lead"
       color={darkMode ? "primary.contrastText" : "primary.main"}
     >
-      ReactAdmin
+      {title}
     </Typography>
   );
 
@@ -114,7 +116,7 @@ const AuthLayout = ({
         )}
         {postInputEl}
         <Button type="submit" variant="contained" disabled={isSubmitting}>
-          login
+          {btnTitle}
         </Button>
         {postBtnEl}
       </Box>

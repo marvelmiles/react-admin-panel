@@ -111,7 +111,7 @@ export default function Login() {
             {[
               {
                 image: man1,
-                fullname: "Joe bright"
+                fullname: "Joe Bright"
               },
               {
                 image: woman1,

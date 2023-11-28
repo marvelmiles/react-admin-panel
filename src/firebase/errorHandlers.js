@@ -34,7 +34,7 @@ export const setAuthErrorMsg = (setSnackBar, code) => {
       return setSnackBar({
         open: true,
         severity: "error",
-        message: "Network error!"
+        message: "Network error"
       });
   }
 };

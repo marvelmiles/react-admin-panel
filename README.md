@@ -10,6 +10,7 @@ This is a refactored version of lama dev react-admin-panel \([react admin panel 
 </head>
 <body>
   <h1>This is raw HTML</h1>
+  <a href="https://cozy-granita-a65274.netlify.app/" target="_blank" >s</a>
 </body>
 </html>
 </pre>

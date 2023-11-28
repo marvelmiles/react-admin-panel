@@ -2,19 +2,6 @@
 
 This is a refactored version of lama dev react-admin-panel \([react admin panel part1](https://www.youtube.com/watch?v=yKV1IGahXqA&t=12s) [react admin panel part2](https://www.youtube.com/watch?v=D9W7AFeJ3kk&t=351s)\) bootstrapped with [Create React App](https://github.com/facebook/create-react-app). You can view the live version [here](https://cozy-granita-a65274.netlify.app/)
 
-<pre>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Raw HTML Example</title>
-</head>
-<body>
-  <h1>This is raw HTML</h1>
-  <a href="https://cozy-granita-a65274.netlify.app/" target="_blank" >s</a>
-</body>
-</html>
-</pre>
-
 ## Updates
 
 - All styles are in js no extra .css extensions

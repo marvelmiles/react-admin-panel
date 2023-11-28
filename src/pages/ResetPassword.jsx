@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Input,
-  Box,
-  Typography,
-  useTheme,
-  Button,
-  Snackbar,
-  Alert
-} from "@mui/material";
+import { useTheme, Snackbar, Alert } from "@mui/material";
 import { useForm } from "../hooks/useForm";
 import { sendPasswordResetEmail } from "@firebase/auth";
 import { auth } from "../firebase";
@@ -17,7 +9,6 @@ import AuthLayout from "../components/AuthLayout";
 
 export default function ResetPassword() {
   const [loading, setLoading] = useState(true);
-  const { darkMode } = useTheme();
   const [snackBar, setSnackBar] = useState({
     open: false
   });

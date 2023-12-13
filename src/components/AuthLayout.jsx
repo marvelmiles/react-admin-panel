@@ -10,6 +10,7 @@ import { useTheme } from "@mui/material";
 import FormHelperText from "@mui/material/FormHelperText";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import { Loading } from "./Animations";
 
 const AuthLayout = ({
   handleSubmit,
@@ -116,7 +117,7 @@ const AuthLayout = ({
         )}
         {postInputEl}
         <Button type="submit" variant="contained" disabled={isSubmitting}>
-          {btnTitle}
+          {isSubmitting ? <Loading sm /> : btnTitle}
         </Button>
         {postBtnEl}
       </Box>

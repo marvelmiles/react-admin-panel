@@ -62,6 +62,7 @@ export default function Login() {
     },
     onSubmit
   );
+
   const handleSnackClose = (_, reason) => {
     if (reason === "clickaway") return;
     setSnackBar({ ...snackBar, open: false });
@@ -98,47 +99,55 @@ export default function Login() {
           { type: "password", name: "password" }
         ]}
         postFormEl={
-          <Box
-            component="fieldset"
-            sx={{
-              border: "1px solid currentColor",
-              borderColor: "grey.400",
-              color: "primary.main",
-              borderRadius: "5px"
-            }}
-          >
-            <legend>Demo Account</legend>
-            {[
-              {
-                image: man1,
-                fullname: "Joe Bright"
-              },
-              {
-                image: woman1,
-                fullname: "Adebayo Opeyemi"
-              }
-            ].map((u, i) => {
-              const trim = u.fullname.replace(/\s/, "").toLowerCase();
-              return (
-                <Chip
-                  key={i}
-                  sx={{
-                    cursor: isSubmitting ? "not-allowed" : "pointer",
-                    m: 1
-                  }}
-                  onClick={() =>
-                    isSubmitting
-                      ? null
-                      : handleDemoAcc({
-                          email: trim + "@demo.com",
-                          password: trim
-                        })
-                  }
-                  avatar={<Avatar alt={u.fullname} src={u.image} />}
-                  label={u.fullname}
-                />
-              );
-            })}
+          <Box>
+            <Box
+              component="fieldset"
+              sx={{
+                border: "1px solid currentColor",
+                borderColor: "grey.400",
+                color: "primary.main",
+                borderRadius: "5px"
+              }}
+            >
+              <legend>Demo Accounts</legend>
+              {[
+                {
+                  image: man1,
+                  fullname: "Joe Bright"
+                },
+                {
+                  image: woman1,
+                  fullname: "Adebayo Opeyemi"
+                }
+              ].map((u, i) => {
+                const trim = u.fullname.replace(/\s/, "").toLowerCase();
+                return (
+                  <Chip
+                    key={i}
+                    sx={{
+                      cursor: isSubmitting ? "not-allowed" : "pointer",
+                      m: 1
+                    }}
+                    onClick={() =>
+                      isSubmitting
+                        ? null
+                        : handleDemoAcc({
+                            email: trim + "@demo.com",
+                            password: trim
+                          })
+                    }
+                    avatar={<Avatar alt={u.fullname} src={u.image} />}
+                    label={u.fullname}
+                  />
+                );
+              })}
+            </Box>
+
+            <Typography sx={{ mt: 1, color: "error.main", fontSize: "12px" }}>
+              Warning: Anonymous users sharing the same demo account as you can
+              POST, DELETE and UPDATE any content. For a personalized
+              experience, please signup and login.
+            </Typography>
           </Box>
         }
         postInputEl={

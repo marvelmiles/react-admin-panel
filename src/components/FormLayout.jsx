@@ -155,7 +155,7 @@ export default function FormLayout({
                   disabled={isSubmitting}
                   type="submit"
                 >
-                  {btnEl}
+                  {isSubmitting ? <Loading sm /> : btnEl}
                 </Button>
               </Grid>
             </Grid>

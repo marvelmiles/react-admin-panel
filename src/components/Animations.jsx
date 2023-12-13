@@ -3,10 +3,19 @@ import { useStateValue } from "../provider";
 
 export const SlideTransition = props => <Slide {...props} />;
 
-export const Loading = () => {
+export const Loading = ({ sm }) => {
   const {
     state: { darkMode }
   } = useStateValue();
+
+  const props = sm
+    ? {
+        value: 60,
+        thickness: 4,
+        size: 20
+      }
+    : {};
+
   return (
     <Stack
       justifyContent="center"
@@ -18,6 +27,7 @@ export const Loading = () => {
       }}
     >
       <CircularProgress
+        {...props}
         sx={{
           color: darkMode ? "primary.light" : "primary.main"
         }}

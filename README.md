@@ -28,6 +28,7 @@ This project is a fullstack frontend development app built majorly on google fir
 
 **Development**
 - npm run dev
+- Open browser at speciifed url. Most likely [http://localhost:3000](http://localhost:3000)
 
 **Production**
 - npm run build

@@ -2,7 +2,7 @@
  
 This project is a fullstack frontend development app built majorly on google firebase technology. Bootstrapped with [Create React App](https://github.com/facebook/create-react-app), it is a refactored version of lama dev react-admin-panel \([react admin panel part1](https://www.youtube.com/watch?v=yKV1IGahXqA&t=12s) [react admin panel part2](https://www.youtube.com/watch?v=D9W7AFeJ3kk&t=351s)\). You can view the live version [here](https://cozy-granita-a65274.netlify.app/).
 
-## Refactor Updates
+### Refactor Updates
 
 - All styles are in js no extra .css extensions
 - UI responsiveness across screens
